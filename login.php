@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +12,16 @@
   <form action="validacao.php" method="post">
   <fieldset>
   <legend style="text-align: center;">Dados de Login</legend>
+    <?php 
+      if(isset($_SESSION['nao_autenticado'])):
+    ?>
+      <div class="notification is-danger col-sm-12 col-sm-push-5">
+        <p>Usuario ou senha inválidos</p>
+      </div>
+    <?php
+      endif;
+      unset($_SESSION['nao_autenticado']);
+    ?>
     <div class="col-sm-4 col-sm-push-4">
       <div class="col-sm-12">
         <div class="col-sm-4">
