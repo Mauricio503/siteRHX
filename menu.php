@@ -15,7 +15,7 @@
   	 <ul style="list-style: none; margin-top: 30px;">
 		<b>
 		<li class="col-sm-3">Home</li>
-		<li class="col-sm-3">Noticias</li>
+		<li class="col-sm-3">Informativo</li>
 		<li class="col-sm-3">Objetivos</li>
 		<li class="col-sm-3">Fórum</li>
 		</b>
