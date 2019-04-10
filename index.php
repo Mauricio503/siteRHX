@@ -10,42 +10,53 @@
 	include("menu.php");
 	include("funcoes.php")
 	?>
-	<div class="col-sm-3" id="botao_oQueE" onclick="ativarDesativarConteudo('botao_oQueE')" style="background: green;border-radius: 100px 100px 0 0;">
-		<label class="col-sm-6 col-sm-push-4" style="color: #eee">O que é?</label>
-	</div>
-	<div class="col-sm-3" id="botao_tratamento" onclick="ativarDesativarConteudo('botao_tratamento')" style="background: red;border-radius: 100px 100px 0 0;">
-		<label class="col-sm-6 col-sm-push-4" style="color: #eee">Tratamento</label>
-	</div>
-	<div class="col-sm-3" onclick="ativarDesativarConteudo('botao_objetivos')" id="botao_objetivos" style="background: black;border-radius: 100px 100px 0 0;">
-		<label class="col-sm-6 col-sm-push-4" style="color: #eee">Objetivos</label>
-	</div>
-	<div class="col-sm-12" id="conteudo_oQueE" style="background: green;">
-		<p style="color: #eee">O <b>Raquitismo Hipofosfatemico ligado ao cromossomo X(RHX)</b></p>
-	</div>
-	<div class="col-sm-12" id="conteudo_tratamento" style="background: red;display: none;">
-		<p style="color: #eee">2</p>
-	</div>
-	<div class="col-sm-12" id="conteudo_objetivos" style="background: black; display: none;">
-		<p style="color: #eee">3</p>
-	</div>
 
-	<script type="text/javascript">
-		function ativarDesativarConteudo(menu){
-			if (menu == "botao_objetivos") {
-				document.getElementById('conteudo_oQueE').style = "display: none;";
-				document.getElementById('conteudo_tratamento').style = "display: none;";
-				document.getElementById('conteudo_objetivos').style = "display: block;background: black;";
-			}else if (menu == "botao_tratamento") {
-				document.getElementById('conteudo_oQueE').style = "display: none;";
-				document.getElementById('conteudo_tratamento').style = "display: block;background: red;";
-				document.getElementById('conteudo_objetivos').style = "display: none;";
-			}else {
-				document.getElementById('conteudo_oQueE').style = "display: block;background: green;";
-				document.getElementById('conteudo_tratamento').style = "display: none;";
-				document.getElementById('conteudo_objetivos').style = "display: none;";
-			}
+	<!-- Abas nav -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item col-sm-3">
+    <a class="nav-link active" id="oQueE-tab" data-toggle="tab" role="tab" aria-controls="oQueE" aria-selected="true"
+    style="background: green;border-radius: 100px 100px 0 0;color: #eee;text-align: center;" onclick="alteraConteudo('oQueE')" 
+    >O que é?</a>
+  </li>
+  <li class="nav-item col-sm-3">
+    <a class="nav-link" id="tratamento-tab" data-toggle="tab"  role="tab" aria-controls="tratamento" aria-selected="false"
+   style="background: red;border-radius: 100px 100px 0 0;color: #eee;text-align: center;" onclick="alteraConteudo('tratamento')">Tratamento</a>
+  </li>
+  <li class="nav-item col-sm-3">
+    <a class="nav-link" id="objetivos-tab" data-toggle="tab" role="tab" aria-controls="objetivos" aria-selected="false"
+    style="background: black;border-radius: 100px 100px 0 0;color: #eee;text-align: center;" onclick="alteraConteudo('objetivos')" 
+    >Objetivos</a>
+  </li>
+ 
+</ul>
+
+<!-- Painel de abas -->
+<div class="tab-content">
+  <div class="tab-pane active" id="oQueE" role="tabpanel" aria-labelledby="oQueE-tab" style="background: green;color: #eee">O que é?</div>
+  <div class="tab-pane" id="tratamento" role="tabpanel" aria-labelledby="tratamento-tab" style="background: red;color: #eee">Tratamento</div>
+  <div class="tab-pane" id="objetivos" role="tabpanel" aria-labelledby="objetivos-tab" style="background: black;color: #eee">Objetivos</div>
+</div>
+
+<script type="text/javascript">
+	function alteraConteudo(menu){
+		if(menu == "oQueE"){
+			document.getElementById('oQueE').setAttribute("class","tab-pane active");
+			document.getElementById('tratamento').setAttribute("class","tab-pane");
+			document.getElementById('objetivos').setAttribute("class","tab-pane");
+		} else if (menu == "tratamento"){
+			document.getElementById('oQueE').setAttribute("class","tab-pane");
+			document.getElementById('tratamento').setAttribute("class","tab-pane active");
+			document.getElementById('objetivos').setAttribute("class","tab-pane");
+		} else {
+			document.getElementById('oQueE').setAttribute("class","tab-pane");
+			document.getElementById('tratamento').setAttribute("class","tab-pane");
+			document.getElementById('objetivos').setAttribute("class","tab-pane active");
 		}
-	</script>
+	}
+	
+</script>
+
+
 	<div class="col-sm-8">
 		<h2 style="text-align: center;font-family: Bookman;">Informativo</h2>
 
