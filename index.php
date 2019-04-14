@@ -67,8 +67,8 @@
     		foreach ($resultado as $result) {?>
     				
     			<div>	
-    				<img src="https://rockcontent.com/blog/wp-content/uploads/2016/08/imagens-gratis-6.jpg" class="col-sm-2" style="height: 100px; border: solid 1px #000; padding: 0;">
-				 <li class="col-sm-8 col-sm-push-1" style=" list-style-type:none">
+    				<img src="https://rockcontent.com/blog/wp-content/uploads/2016/08/imagens-gratis-6.jpg" class="col-sm-2 col-xs-5" style="height: 100px; border: solid 1px #000; padding: 0;">
+				 <li class="col-sm-8 col-sm-push-1 col-xs-6" style=" list-style-type:none">
 				 	<h4>
 				 		<b>
 						<a href="noticia/<?=$result['id']?>" style="color: #000; font-family: Marker Felt; font-size: 20px;" >	<?=$result['titulo']?></a><a href="editar_noticia.php?id=<?=$result['id']?>" class="text-info pull-right">
@@ -76,7 +76,7 @@
 						</b>
 					</h4>
 				</li>
-				<li style=" list-style-type:none" class="col-sm-8 col-sm-push-1">
+				<li style=" list-style-type:none" class="col-lg-8 col-lg-push-1 col-xs-6">
 					<?php
 						echo substr($result['descricao'], 0, 300);
 					?>	... <a href="">ver mais</a>
@@ -87,7 +87,7 @@
         </ul>
     </div>
 	</div>
-	<div class="col-sm-4 panel-body">
+	<div class="col-sm-4 panel-body" id="painel_contato">
 		<table>
 			<tr>
 			<th style=" border-top: 20px solid transparent; 
