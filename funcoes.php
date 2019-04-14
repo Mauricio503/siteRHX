@@ -26,4 +26,5 @@ $password = "root";
 	$resultado = mysqli_query($conexao2,$sql) or die("Erro");
     return $resultado;
 }
+
 ?>

@@ -11,51 +11,18 @@
 	include("funcoes.php")
 	?>
 
-	<!-- Abas nav -->
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item col-sm-3">
-    <a class="nav-link active" id="oQueE-tab" data-toggle="tab" role="tab" aria-controls="oQueE" aria-selected="true"
-    style="background: green;border-radius: 100px 100px 0 0;color: #eee;text-align: center;" onclick="alteraConteudo('oQueE')" 
-    >O que é?</a>
-  </li>
-  <li class="nav-item col-sm-3">
-    <a class="nav-link" id="tratamento-tab" data-toggle="tab"  role="tab" aria-controls="tratamento" aria-selected="false"
-   style="background: red;border-radius: 100px 100px 0 0;color: #eee;text-align: center;" onclick="alteraConteudo('tratamento')">Tratamento</a>
-  </li>
-  <li class="nav-item col-sm-3">
-    <a class="nav-link" id="objetivos-tab" data-toggle="tab" role="tab" aria-controls="objetivos" aria-selected="false"
-    style="background: black;border-radius: 100px 100px 0 0;color: #eee;text-align: center;" onclick="alteraConteudo('objetivos')" 
-    >Objetivos</a>
-  </li>
- 
-</ul>
-
-<!-- Painel de abas -->
-<div class="tab-content">
-  <div class="tab-pane active" id="oQueE" role="tabpanel" aria-labelledby="oQueE-tab" style="background: green;color: #eee">O que é?</div>
-  <div class="tab-pane" id="tratamento" role="tabpanel" aria-labelledby="tratamento-tab" style="background: red;color: #eee">Tratamento</div>
-  <div class="tab-pane" id="objetivos" role="tabpanel" aria-labelledby="objetivos-tab" style="background: black;color: #eee">Objetivos</div>
-</div>
-
-<script type="text/javascript">
-	function alteraConteudo(menu){
-		if(menu == "oQueE"){
-			document.getElementById('oQueE').setAttribute("class","tab-pane active");
-			document.getElementById('tratamento').setAttribute("class","tab-pane");
-			document.getElementById('objetivos').setAttribute("class","tab-pane");
-		} else if (menu == "tratamento"){
-			document.getElementById('oQueE').setAttribute("class","tab-pane");
-			document.getElementById('tratamento').setAttribute("class","tab-pane active");
-			document.getElementById('objetivos').setAttribute("class","tab-pane");
-		} else {
-			document.getElementById('oQueE').setAttribute("class","tab-pane");
-			document.getElementById('tratamento').setAttribute("class","tab-pane");
-			document.getElementById('objetivos').setAttribute("class","tab-pane active");
-		}
-	}
-	
-</script>
-
+	<div class="col-sm-12">
+		<div class="col-sm-1">Pesquisa:</div>
+		<span class="badge badge-secondary">Ultimo Mês</span>
+		<span class="badge badge-secondary">Ultimo 3 Meses</span>
+		<span class="badge badge-secondary">Ultimo 6 Meses</span>
+		<span class="badge badge-secondary">Ultimo ano</span>
+		<span class="badge badge-secondary">Todos</span>
+		<div class="form-group input-group col-sm-4" style="float: right;">
+ 			<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+			<input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+		</div>
+	</div>
 
 	<div class="col-sm-8">
 		<h2 style="text-align: center;font-family: Bookman;">Informativo</h2>
@@ -146,4 +113,4 @@
 	include("footer.php");
 	?>
 </body>
-</html>
+</html>	
