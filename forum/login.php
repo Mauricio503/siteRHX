@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head> 
@@ -17,8 +20,18 @@
                     <hr />
                   </div>
               </div> 
+              <?php 
+      if(isset($_SESSION['nao_autenticado'])):
+    ?>
+      <div class="notification is-danger col-sm-12 col-sm-push-5">
+        <p>Usuario ou senha inválidos</p>
+      </div>
+    <?php
+      endif;
+      unset($_SESSION['nao_autenticado']);
+    ?>
         <div class="main-login main-center">
-          <form class="form-horizontal" method="post" action="registro.php">
+          <form class="form-horizontal" method="post" action="validacao.php">
             <div class="form-group">
               <div class="col-sm-push-3 col-sm-6">
                 <div class="input-group">
@@ -40,7 +53,7 @@
             <div class="form-group col-sm-push-5 col-sm-2">
               <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Login</button>
               <br>
-               <a href="login.php" style="margin-left: 35%;">Criar Conta</a>
+               <a href="registrar.php" style="margin-left: 35%;">Criar Conta</a>
             </div>
           </form>
         </div>
