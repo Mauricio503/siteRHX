@@ -1,16 +1,15 @@
+<?php
+session_start();
+include('verifica_login.php');
+include("funcoes.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	<?php
-session_start();
-include('verifica_login.php');
-include('funcoes.php');
-?>
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-
-<br>
 </head>
 <body>
 <div class="container">
@@ -30,7 +29,13 @@ include('funcoes.php');
 	</div>
 </div>
 <br>
+<?php 
+	include("funcoes.php");
 
+	if(isset($_POST['id'])){
+		$id = "$_POST[id]";
+	}
+?>
 <div class="table-reponsive">
 	<table class="table table-bordered table-hover">
 		<thead>
@@ -42,10 +47,10 @@ include('funcoes.php');
 		</thead>
 		<tbody>
 		<?php 
-            $resultado = temas();
+            $resultado = lista_topicos($id);
     		foreach ($resultado as $result) {?>
 			<tr>
-				<form action="topico.php" method="post">
+				<form action="posts.php" method="post">
 					<input type="hidden" name="id" value="<?=$result['id'];?>">
 				<td align="left"><button type="submit"><?php echo $result['nome'] ?></button>
 				</form>
