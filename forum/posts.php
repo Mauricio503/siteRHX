@@ -32,17 +32,24 @@ include("funcoes.php");
 <?php 
 	include("funcoes.php");
 
-	if(isset($_POST['id'])){
-		$id = "$_POST[id]";
+	if(isset($_GET['id'])){
+		$id = "$_GET[id]";
+	}
+	if(isset($_GET['idT'])){
+		$idT = "$_GET[idT]";
 	}
 ?>
+
+	<a type="button" class="btn btn-light btn-sm" href="topico.php?id=<?=$idT?>">Voltar</a>
+
+
 <div class="table-reponsive">
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr class="well">
 				<th style="text-align: left;width: 40%;">Usuario</th>
 				<th>Post</th>
-				<th><a class="btn btn-xs btn-success" href="adicionar_post.php"><span class="glyphicon glyphicon-plus"> </span></a></th>
+				<th style="width: 50px;"><a class="btn btn-xs btn-success" href="adicionar_post.php?id=<?=$id?>&idT=<?=$idT?>"><span class="glyphicon glyphicon-plus"> </span></a></th>
 			</tr>								
 		</thead>
 		<tbody>

@@ -8,8 +8,9 @@ include("funcoes.php");
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  	<script src="../js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 </head>
 <body>
 <div class="container">
@@ -32,17 +33,25 @@ include("funcoes.php");
 <?php 
 	include("funcoes.php");
 
-	if(isset($_POST['id'])){
-		$id = "$_POST[id]";
+	if(isset($_GET['id'])){
+		$id = "$_GET[id]";
 	}
 ?>
+
+	<a type="button" class="btn btn-light btn-sm" href="painel.php">Voltar</a>
+
+
 <div class="table-reponsive">
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr class="well">
-				<th style="text-align: left;width: 60%;">Tema</th>
+				<th style="text-align: left;width: 60%;">Topico</th>
 				<th>Tópicos</th>
 				<th>Ultima Atualização</th>
+				<th><button id="topico_ativaModal"
+							class="btn btn-sm btn-success" data-toggle="modal" type="button" data-target="#modalTopico">
+							<span class="glyphicon glyphicon-plus" />
+						</button></th>
 			</tr>								
 		</thead>
 		<tbody>
@@ -50,10 +59,7 @@ include("funcoes.php");
             $resultado = lista_topicos($id);
     		foreach ($resultado as $result) {?>
 			<tr>
-				<form action="posts.php" method="post">
-					<input type="hidden" name="id" value="<?=$result['id'];?>">
-				<td align="left"><button type="submit"><?php echo $result['nome'] ?></button>
-				</form>
+				<td align="left"><a type="button" href="posts.php?id=<?=$result['id'];?>&idT=<?=$id?>"><?php echo $result['nome'] ?></a>
 					<br>
 					<p>fd</p>
 				</td>
@@ -65,5 +71,48 @@ include("funcoes.php");
 	</table>
 </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="modalTopico" tabindex="-1" role="dialog" aria-labelledby="topicoModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+  	<form action="adiciona_topico.php" method="post">
+    		<input type="hiden" name="idTema" value="<?=$id?>">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="topicoModalLabel">Novo Tópico</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      	<div class="row">
+      	<div class="col-sm-4">
+      		<label>Titulo:</label>
+      	</div>
+       <div class="col-sm-8">
+			<input type="text" class="form-control" name="nome" id="nome"/>
+		</div>
+		<div class="col-sm-4">
+			<label>Descrição:</label>
+		</div>
+		<div class="col-sm-8" style="margin-top: 10px;">
+			<textarea name="descricao" class="form-control"></textarea>
+		</div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 </body>
+
+
+
+
 </html>

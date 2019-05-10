@@ -43,12 +43,18 @@ include("funcoes.php");
 Usuario:<?php echo $_SESSION['email'];?>
 <?php 
 
-	if(isset($_POST['id'])){
-		$id = "$_POST[id]";
+	if(isset($_GET['id'])){
+		$id = "$_GET[id]";
+	}
+	if(isset($_GET['idT'])){
+		$idT = "$_GET[idT]";
 	}
 ?>
 <div class="main-login main-center">
-	<form class="form-horizontal" method="post" action="registro.php">
+	<form class="form-horizontal" method="post" action="adiciona_post.php">
+		<input type="text" name="idTopico" value="<?=$id?>">
+		<input type="hidden" name="emailUsuario" value="<?=$_SESSION['email'];?>">
+		<input type="text" name="idTema" value="<?=$idT?>">
 		<div class="col-sm-8">
 			<div class="col-sm-4">
 				<label>Titulo:</label>
@@ -57,8 +63,7 @@ Usuario:<?php echo $_SESSION['email'];?>
 				<input type="text" class="form-control" name="titulo" id="titulo"/>
 			</div>
 		</div>
-
-	<div class="col-sm-12">
+	<div class="col-sm-12" style="margin-top: 10px;">
     	<textarea name="descricao"></textarea>
     </div>
 
@@ -75,8 +80,11 @@ Usuario:<?php echo $_SESSION['email'];?>
 
 
 </script>
+	
 </div>
 	<button type="submit" class="btn btn-primary btn-sm">Criar</button>
+	</form>
+		<a type="button" class="btn btn-light btn-sm" href="posts.php?id=<?=$id?>&idT=<?=$idT?>">Voltar</a>
 	</form>
 </div>
 </body>

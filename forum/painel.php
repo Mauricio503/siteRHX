@@ -45,10 +45,7 @@ include('funcoes.php');
             $resultado = temas();
     		foreach ($resultado as $result) {?>
 			<tr>
-				<form action="topico.php" method="post">
-					<input type="hidden" name="id" value="<?=$result['id'];?>">
-				<td align="left"><button type="submit"><?php echo $result['nome'] ?></button>
-				</form>
+				<td align="left"><a type="button" href="topico.php?id=<?=$result['id'];?>"><?php echo $result['nome'] ?></a>
 					<br>
 					<p>fd</p>
 				</td>
