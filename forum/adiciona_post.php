@@ -29,5 +29,10 @@
 		$sql ="insert into post (titulo,descricao,idusuario,idtopico) values('$titulo','$descricao','$idusuario','$idTopico')";
 		$resultado = mysqli_query($conexao,$sql) or die(mysqli_error($conexao));
 	}
- 	header('Location: /www/siteRHX/forum/posts.php?id='+$idTema+'&idT='+$idTopico);	
+
+	if(is_numeric($idTema) && is_numeric($idTopico)){
+ 		header('Location: /www/siteRHX/forum/posts.php?id='+$idTema+'&idT='+$idTopico);	
+ 	}else{
+ 		echo "Adicionado com Sucesso <a href='javascript:history.back(-1);'>Voltar</a>";
+ 	}
 ?>

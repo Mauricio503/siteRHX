@@ -52,9 +52,9 @@ Usuario:<?php echo $_SESSION['email'];?>
 ?>
 <div class="main-login main-center">
 	<form class="form-horizontal" method="post" action="adiciona_post.php">
-		<input type="text" name="idTopico" value="<?=$id?>">
+		<input type="hidden" name="idTopico" value="<?=$id?>">
 		<input type="hidden" name="emailUsuario" value="<?=$_SESSION['email'];?>">
-		<input type="text" name="idTema" value="<?=$idT?>">
+		<input type="hidden" name="idTema" value="<?=$idT?>">
 		<div class="col-sm-8">
 			<div class="col-sm-4">
 				<label>Titulo:</label>
