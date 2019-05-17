@@ -9,16 +9,16 @@
 		$descricao = $_POST['descricao'];
 	}
 
-	if(isset($_GET['id'])){
-		$idTopico = $_GET['id'];
+	if(isset($_POST['idTopico'])){
+		$idTopico = $_POST['idTopico'];
 	}
 
 	if(isset($_POST['emailUsuario'])){
 		$emailUsuario = $_POST['emailUsuario'];
 	}
 
-	if(isset($_GET['idT'])){
-		$idTema = $_GET['idT'];
+	if(isset($_POST['idTema'])){
+		$idTema = $_POST['idTema'];
 	}
 
 	$sqlBusca = "SELECT * FROM usuario WHERE email = '$emailUsuario'";
@@ -31,14 +31,7 @@
 	}
 
 	if(is_numeric($idTema) && is_numeric($idTopico)){
-		$variavel = intval($idTema);
-		$variavel2 = intval($idTopico);
-		echo gettype($idTema);
-		echo gettype($idTopico);
-		echo gettype($variavel);
-		echo gettype($variavel2);
- 		//header("Location: /www/siteRHX/forum/posts.php?id="+$variavel+"&idT="+$variavel2);
- 		header('javascript:history.back(-1);');
+ 		header("Location: /www/siteRHX/forum/posts.php?id=$idTopico&idT=$idTema");
  	}else{
  		echo "Adicionado com Sucesso <a href='javascript:history.back(-1);'>Voltar</a>";
  	}

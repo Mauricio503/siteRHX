@@ -11,15 +11,6 @@ include("funcoes.php");
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-<script type="text/javascript" src="froala_editor.min" ></script>
-
-<!-- Include external CSS. -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
-
-    <!-- Include Editor style. -->
-    <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.5/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.5/css/froala_style.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -51,7 +42,7 @@ Usuario:<?php echo $_SESSION['email'];?>
 	}
 ?>
 <div class="main-login main-center">
-	<form class="form-horizontal" method="post" action="adiciona_post.php?id=<?=$id?>&idT=<?=$idT?>">
+	<form class="form-horizontal" method="post" action="adiciona_post.php">
 		<input type="hidden" name="idTopico" value="<?=$id?>">
 		<input type="hidden" name="emailUsuario" value="<?=$_SESSION['email'];?>">
 		<input type="hidden" name="idTema" value="<?=$idT?>">
