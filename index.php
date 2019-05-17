@@ -36,8 +36,8 @@
   <div class="tab-pane active col-sm-12" id="oQueE" role="tabpanel" aria-labelledby="oQueE-tab" style="background: green;color: #eee;">
   	<div class="col-sm-6">
   		Raquitismo Hipofosfatêmico ligado ao cromosso X (RHX) é uma doença genética rara,<br> ela faz com que o corpo não
-  	tenha capacidade de absorver dos alimentos o fósforo nescessário para o corpo, como efeito pode causar vários problemas
-  	dentre eles, é a curvatura dos ossos.
+  	tenha capacidade de absorver dos alimentos o fósforo nescessário, como efeito pode causar vários problemas
+  	dentre eles, a curvatura dos ossos.
   	</div>
   	<div class="col-sm-4" style="float: right;margin:10px 0 10px 0; ">
   		<img src="img/ossos raquitismo.jpg">
@@ -106,7 +106,7 @@
 					<li style=" list-style-type:none" class="col-lg-8 col-lg-push-1 col-xs-6">
 						<?php
 							echo substr($result['descricao'], 0, 300);
-						?>	... <a href="">ver mais</a>
+						?>	... <a href="visualizaNoticia.php?id=<?=$result['id']?>">ver mais</a>
 					</li>
 				</div>
 			

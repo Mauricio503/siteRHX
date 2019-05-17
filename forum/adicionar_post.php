@@ -51,7 +51,7 @@ Usuario:<?php echo $_SESSION['email'];?>
 	}
 ?>
 <div class="main-login main-center">
-	<form class="form-horizontal" method="post" action="adiciona_post.php">
+	<form class="form-horizontal" method="post" action="adiciona_post.php?id=<?=$id?>&idT=<?=$idT?>">
 		<input type="hidden" name="idTopico" value="<?=$id?>">
 		<input type="hidden" name="emailUsuario" value="<?=$_SESSION['email'];?>">
 		<input type="hidden" name="idTema" value="<?=$idT?>">
@@ -63,20 +63,17 @@ Usuario:<?php echo $_SESSION['email'];?>
 				<input type="text" class="form-control" name="titulo" id="titulo"/>
 			</div>
 		</div>
-	<div class="col-sm-12" style="margin-top: 10px;">
-    	<textarea name="descricao"></textarea>
-    </div>
 
-    <!-- Include external JS libs. -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
-
-    <!-- Include Editor JS files. -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@2.9.5/js/froala_editor.pkgd.min.js"></script>
-
-    <!-- Initialize the editor. -->
-    <script> $(function() { $('textarea').froalaEditor() }); </script>
+    <script src="../ckeditor/ckeditor.js"></script>
+	<div class="col-sm-12">
+		<label for="descricao">Descrição</label>
+	</div>
+	<div id="dvCentro" class="col-sm-12">
+            <textarea id="txtArtigo" name="descricao"></textarea>
+        </div>
+        <script>
+                CKEDITOR.replace( 'txtArtigo' );
+        </script>
 
 
 </script>
