@@ -74,8 +74,6 @@ Usuario:<?php echo $_SESSION['email'];?>
         <script>
                 CKEDITOR.replace( 'txtArtigo' );
         </script>
-
-
 </script>
 	
 </div>
