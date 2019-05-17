@@ -14,10 +14,19 @@
 		<label for="titulo">Titulo</label>
 		<input type="text" id="titulo" name="titulo" class="form-control" value="<?=$dados['titulo'];?>">
 	</div>
-	<div class="form-group col-xs-12">
+
+	<script src="ckeditor/ckeditor.js"></script>
+	<div class="col-sm-12">
 		<label for="descricao">Descrição</label>
-		<textarea name="descricao" class="form-control" ><?=$dados['descricao'];?></textarea>
 	</div>
+	<div id="dvCentro" class="col-sm-12">
+            <textarea id="txtArtigo" name="descricao"><?=$dados['descricao'];?></textarea>
+        </div>
+        <script>
+                CKEDITOR.replace( 'txtArtigo' );
+        </script>
+
+
 	<div class="form-group col-xs-12">
 		<label for="imagem">Url Imagem</label>
 		<input type="text" id="imagem" name="imagem" class="form-control" value="<?=$dados['imagem'];?>">

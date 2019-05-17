@@ -7,7 +7,7 @@ include("funcoes.php");
 <!doctype html>
 <html lang="pt-br">
     <head>
-        <title>CKEditor</title>
+        <title>RHX</title>
         <meta charset="utf-8" />
     </head>
     <body>
