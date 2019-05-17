@@ -4,6 +4,7 @@
 	<title>RHX</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<?php 
@@ -32,25 +33,51 @@
 
 <!-- Painel de abas -->
 <div class="tab-content">
-  <div class="tab-pane active" id="oQueE" role="tabpanel" aria-labelledby="oQueE-tab" style="background: green;color: #eee">O que é?</div>
-  <div class="tab-pane" id="tratamento" role="tabpanel" aria-labelledby="tratamento-tab" style="background: red;color: #eee">Tratamento</div>
-  <div class="tab-pane" id="objetivos" role="tabpanel" aria-labelledby="objetivos-tab" style="background: black;color: #eee">Objetivos</div>
+  <div class="tab-pane active col-sm-12" id="oQueE" role="tabpanel" aria-labelledby="oQueE-tab" style="background: green;color: #eee;">
+  	<div class="col-sm-6">
+  		Raquitismo Hipofosfatêmico ligado ao cromosso X (RHX) é uma doença genética rara,<br> ela faz com que o corpo não
+  	tenha capacidade de absorver dos alimentos o fósforo nescessário para o corpo, como efeito pode causar vários problemas
+  	dentre eles, é a curvatura dos ossos.
+  	</div>
+  	<div class="col-sm-4" style="float: right;margin:10px 0 10px 0; ">
+  		<img src="img/ossos raquitismo.jpg">
+  	</div>
+  </div>
+  <div class="tab-pane" id="tratamento" role="tabpanel" aria-labelledby="tratamento-tab"  style="background: red;color: #eee">
+  	<div class="col-sm-4" style="float: left; background: red;color: #eee;margin:10px 0 10px 0; ">
+  		<img src="img/comprimidos.jpg" class="col-sm-6" style="float: left;">
+  	</div>
+  	<div class="col-sm-6">
+  	Atualmente o tratamento mais convencional é o consumo de altos niveis de fosforo por meio de comprimidos procurando normalizar
+  a quantidade que o corpo precisa no sangue, porém os efeitos da doença ainda são causados.
+  	Existe outro tratamento recentemente lançado que é o Burosumab um medicamento que age no hormonio FGF23 causador da eleminação
+  	de fosforo, fazendo como que o corpo volte a absorver sem a necessidado de ingerir altos niveis de fosforo.
+  </div>
+   </div>
+  <div class="tab-pane" id="objetivos" role="tabpanel" aria-labelledby="objetivos-tab" style="background: black;color: #eee">
+  	<div class="col-sm-6">
+  		Com o site criar um grupo, aonde as pessoa compartilham experiências e informações sobre a doença.
+  	</div>
+  	<div class="col-sm-4">
+  		<img src="img/conversas.jpg" class="col-sm-6" style="margin:10px 0 10px 0;">
+  	</div>
+  </div>
 </div>
 
 <script type="text/javascript">
 	function alteraConteudo(menu){
 		if(menu == "oQueE"){
-			document.getElementById('oQueE').setAttribute("class","tab-pane active");
+			document.getElementById('oQueE').setAttribute("class","tab-pane active col-sm-12");
 			document.getElementById('tratamento').setAttribute("class","tab-pane");
 			document.getElementById('objetivos').setAttribute("class","tab-pane");
 		} else if (menu == "tratamento"){
 			document.getElementById('oQueE').setAttribute("class","tab-pane");
-			document.getElementById('tratamento').setAttribute("class","tab-pane active");
+			document.getElementById('tratamento').setAttribute("class","tab-pane active col-sm-12");
 			document.getElementById('objetivos').setAttribute("class","tab-pane");
 		} else {
 			document.getElementById('oQueE').setAttribute("class","tab-pane");
 			document.getElementById('tratamento').setAttribute("class","tab-pane");
-			document.getElementById('objetivos').setAttribute("class","tab-pane active");
+			document.getElementById('objetivos').setAttribute("class","tab-pane active col-sm-12");
 		}
 	}
 	
@@ -58,7 +85,7 @@
 
 
 	<div class="col-sm-8">
-		<h2 style="text-align: center;font-family: Bookman;">Informativo</h2>
+		<h2 style="text-align: center;font-family: Bookman;">Informativos</h2>
 
 		<div class=" panel-body">
         <ul class="list-group">
@@ -119,7 +146,7 @@
 					<div style="margin-left: 20px;">
 			<img class="col-sm-1" src="http://www.fazenda.gov.br/orgaos/colegiados/crsfn/imagens/email/@@images/59b4210b-2170-4aaa-8a77-988c83dbf1b0.png" style="padding: 0;margin-top: 5px;">
 			</div>
-				<b class="col-sm-8" style="font-size: 20px;">atendimento@rhx.org</b>
+				<b class="col-sm-8" style="font-size: 20px;">adm@raquitismohx.org</b>
 			</a>
 			</td>
 			</tr>
