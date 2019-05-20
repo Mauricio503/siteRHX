@@ -50,8 +50,8 @@
   	<div class="col-sm-6">
   	Atualmente o tratamento mais convencional é o consumo de altos niveis de fosforo por meio de comprimidos procurando normalizar
   a quantidade que o corpo precisa no sangue, porém os efeitos da doença ainda são causados.
-  	Existe outro tratamento recentemente lançado que é o Burosumab um medicamento que age no hormonio FGF23 causador da eleminação
-  	de fosforo, fazendo como que o corpo volte a absorver sem a necessidado de ingerir altos niveis de fosforo.
+  	Existe outro tratamento recentemente lançado que é o Burosumab um medicamento que age no hormônio FGF23 causador da eliminação
+  	de fósforo, fazendo como que o corpo volte a absorver sem a necessidado de ingerir altos niveis de fosforo.
   </div>
    </div>
   <div class="tab-pane" id="objetivos" role="tabpanel" aria-labelledby="objetivos-tab" style="background: black;color: #eee">

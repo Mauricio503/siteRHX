@@ -6,7 +6,7 @@ include("funcoes.php");
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>RHX</title>
 </head>
 <body>
 

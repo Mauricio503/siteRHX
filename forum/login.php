@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-    <title>Admin</title>
+    <title>RHX</title>
   </head>
   <body>
     <div class="container">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>RHX</title>
 	<?php
 session_start();
 include('verifica_login.php');
