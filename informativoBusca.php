@@ -1,11 +1,5 @@
 <?php
-	//Incluir a conexão com banco de dados
-	$servername = "localhost";
-$database = "rhx";
-$username = "root";
-$password = "root";
-
-$conexao = mysqli_connect($servername, $username, $password, $database) or die ("Não foi possivel conectar");
+	include('conexao.php');
 	
 	//Recuperar o valor da palavra
 	$consulta = $_POST['consulta'];
