@@ -36,8 +36,8 @@ include('funcoes.php');
 		<thead>
 			<tr class="well">
 				<th style="text-align: left;width: 60%;">Tema</th>
-				<th>Tópicos</th>
-				<th>Ultima Atualização</th>
+				<th>Numero Tópicos</th>
+				<th>Descrição Tópicos</th>
 			</tr>								
 		</thead>
 		<tbody>
@@ -45,12 +45,32 @@ include('funcoes.php');
             $resultado = temas();
     		foreach ($resultado as $result) {?>
 			<tr>
-				<td align="left"><a type="button" href="topico.php?id=<?=$result['id'];?>"><?php echo $result['nome'] ?></a>
+				<td align="left"><h4><a type="button" href="topico.php?id=<?=$result['id'];?>"><?php echo $result['nome'] ?></a></h4>
 					<br>
-					<p>fd</p>
+					<p><?php echo $result['descricao'] ?></a></p>
 				</td>
-				<td></td>
-				<td></td>
+				<td>
+					<?php 	
+            $quantidade = quantidade_topico($result['id']);
+            	echo $quantidade[0];
+        			?>
+				</td>
+				<td>
+					<?php 	
+            $topicos = todos_topicos_tema($result['id']);
+      		$indice = 0;
+			foreach ($topicos as $topico) {
+				if($indice < 3){
+					echo $topico['nome'];
+					echo "<br>";
+					$indice + 1;
+				} else {
+					break;
+				}
+			}	
+        	
+        	?>
+				</td>
 			</tr>
 		<?php } ?>	
 		</tbody>
