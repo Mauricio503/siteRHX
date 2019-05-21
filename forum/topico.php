@@ -18,7 +18,7 @@ include("funcoes.php");
       <div class="row main">
         <div class="panel-heading">
                  <div class="panel-title text-center">
-                    <h1 class="title">RHX(Em construção)</h1>
+                    <h1 class="title"><a href="../index.php"><img src="../img/Logo.png" style="width: 350px;"/></a></h1>
                     <hr />
                   </div>
               </div> 
@@ -47,8 +47,7 @@ include("funcoes.php");
 		<thead>
 			<tr class="well">
 				<th style="text-align: left;width: 60%;">Topico</th>
-				<th>Tópicos</th>
-				<th>Ultima Atualização</th>
+				<th>Numero Post</th>
 				<th><button id="topico_ativaModal"
 							class="btn btn-sm btn-success" data-toggle="modal" type="button" data-target="#modalTopico">
 							<span class="glyphicon glyphicon-plus" />
@@ -60,11 +59,16 @@ include("funcoes.php");
             $resultado = lista_topicos($id);
     		foreach ($resultado as $result) {?>
 			<tr>
-				<td align="left"><a type="button" href="posts.php?id=<?=$result['id'];?>&idT=<?=$id?>"><?php echo $result['nome'] ?></a>
+				<td align="left"><h4><a type="button" href="posts.php?id=<?=$result['id'];?>&idT=<?=$id?>"><?php echo $result['nome'] ?></a> </h4>
 					<br>
-					<p>fd</p>
+					<p><?php echo $result['descricao'] ?></p>
 				</td>
-				<td></td>
+				<td>
+					<?php 	
+           			 $quantidade = quantidade_post($result['id']);
+            			echo $quantidade[0];
+        			?>
+				</td>
 				<td></td>
 			</tr>
 		<?php } ?>	
@@ -77,7 +81,7 @@ include("funcoes.php");
 <div class="modal fade" id="modalTopico" tabindex="-1" role="dialog" aria-labelledby="topicoModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
   	<form action="adiciona_topico.php" method="post">
-    		<input type="hiden" name="idTema" value="<?=$id?>">
+    		<input type="hidden" name="idTema" value="<?=$id?>">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="topicoModalLabel">Novo Tópico</h5>

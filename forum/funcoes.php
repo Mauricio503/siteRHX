@@ -55,4 +55,14 @@ function todos_topicos_tema($idtema){
 	}
 }
 
+if (!function_exists('quantidade_post')) {
+function quantidade_post($idtopico){
+	include("conexao.php");
+	$sql ="select count(id) from post where idtopico=$idtopico";
+	$resultado = mysqli_query($conexao,$sql) or die("Erro");
+	$dados = mysqli_fetch_array($resultado);
+    return $dados;
+	}
+}
+
 ?>

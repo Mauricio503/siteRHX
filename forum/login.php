@@ -17,7 +17,7 @@
       <div class="row main">
         <div class="panel-heading">
                  <div class="panel-title text-center">
-                    <h1 class="title">RHX(Em construção)</h1>
+                    <h1 class="title"><a href="../index.php"><img src="../img/Logo.png" style="width: 350px;"/></a></h1>
                     <hr />
                   </div>
               </div> 
