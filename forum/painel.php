@@ -13,16 +13,13 @@ include('funcoes.php');
 <br>
 </head>
 <body>
-<div class="container">
-      <div class="row main">
-        <div class="panel-heading">
-                 <div class="panel-title text-center">
-                    <h1 class="title">RHX(Em construção)</h1>
-                    <hr />
-                  </div>
-              </div> 
-             </div>
-             </div>
+    <div class="col-sm-12 text-center">
+        <a href="../index.php"><img src="../img/Logo.png" style="width: 350px;"/></a>
+        <hr />
+    </div>
+              
+             
+        
 
 <div class="col-sm-1" style="float: right;">
 	<div class="col-sm-4">
