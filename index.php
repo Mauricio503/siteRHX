@@ -40,12 +40,12 @@
   	dentre eles, a curvatura dos ossos.
   	</div>
   	<div class="col-sm-4" style="float: right;margin:10px 0 10px 0; ">
-  		<img src="img/ossos raquitismo.jpg">
+  		<img src="img/ossos raquitismo.jpg" id="img_oQueE">
   	</div>
   </div>
   <div class="tab-pane" id="tratamento" role="tabpanel" aria-labelledby="tratamento-tab"  style="background: red;color: #eee">
   	<div class="col-sm-4" style="float: left; background: red;color: #eee;margin:10px 0 10px 0; ">
-  		<img src="img/comprimidos.jpg" class="col-sm-6" style="float: left;">
+  		<img src="img/comprimidos.jpg" class="col-sm-6" style="float: left;" id="img_tratamento">
   	</div>
   	<div class="col-sm-6">
   	Atualmente o tratamento mais convencional é o consumo de altos niveis de fosforo por meio de comprimidos procurando normalizar
@@ -59,7 +59,7 @@
   		Com o site criar um grupo, aonde as pessoa compartilham experiências e informações sobre a doença.
   	</div>
   	<div class="col-sm-4">
-  		<img src="img/conversas.jpg" class="col-sm-6" style="margin:10px 0 10px 0;">
+  		<img src="img/conversas.jpg" class="col-sm-6" style="margin:10px 0 10px 0;" id="img_objetivos">
   	</div>
   </div>
 </div>

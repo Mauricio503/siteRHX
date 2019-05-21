@@ -8,7 +8,7 @@ include("funcoes.php");
 <head>
 	<title>RHX</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 </head>
 <body>

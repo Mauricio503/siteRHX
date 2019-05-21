@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 	<script type="text/javascript" src="js/consultaInformativo.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<?php 
