@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 d-none d-lg-block">
-                <div class="about-img">
+                <div class="about-img"  style="margin-bottom: 30px;">
                     <img style="width: 50%;" src="img/crianças sorrindo.jpg" alt="">
                 </div>
             </div>
