@@ -9,9 +9,9 @@ function busca_noticia($id){
 function lista_noticias(){
 
 $servername = "localhost";
-$database = "rhx";
-$username = "root";
-$password = "root";
+$database = "";
+$username = "";
+$password = "";
 // Create connection
  $conexao2 = mysqli_connect($servername, $username, $password, $database) or die ("Não foi possivel conectar");
 	$sql ="select * from noticia";
